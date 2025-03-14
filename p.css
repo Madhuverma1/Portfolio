@@ -28,6 +28,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding-right: 20px;
 }
 /*******************************Navigation Bar**************************************/
 .navbar {
@@ -39,13 +40,14 @@ nav ul li a {
   color: white;
   cursor: pointer;
   position: fixed;
-  height: 50px;
+  height: 60px;
   width: 100%;
 }
 .logo {
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 400;
   text-shadow: 0px 0px 15px aqua;
+  padding-left: 50px;
 }
 .nav-links a {
   list-style: none;
@@ -86,8 +88,9 @@ nav ul li a {
     left: 0;
     background: #060e1b;
     text-align: center;
-    height: 300px;
+    height: 350px;
     text-size-adjust: 40px;
+    transition: 1s;
   }
   nav ul li a {
     padding-top: 20px;
@@ -99,6 +102,24 @@ nav ul li a {
   }
   .menu-toggle {
     display: block;
+    padding-right: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 1px 1px 1px 1px;
+    font-size: 25px;
+    box-shadow: 0px 0px 10px 3px aqua;
+    animation: border 5s linear infinite;
+  }
+  @keyframes border {
+    from {
+     rotate: (border(360deg));
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 /************************************Home page*********************************/
@@ -166,21 +187,22 @@ button .btn {
   transition: 1s;
 }
 .social-links .bx {
-  padding: 8px;
+  padding: 3px;
   border: 3px solid aqua;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  margin: 5px;
-  font-weight: bold;
+  margin: 5px 10px;
 }
 .social-links .bx:hover {
-  text-shadow: 0px 0px 100px aqua;
+  box-shadow: 0px 0px 30px 10px aqua;
 }
 /********************************responsive social-links********************************/
 @media (max-width: 700px) {
   .social-links {
-    margin: 30px auto 0px 80px;
+    margin: 30px 80px 0px 70px;
+    font-size: 40px;
+    font-weight: 100;
   }
 }
 /********************************Skills-boxes**********************************/
@@ -201,6 +223,7 @@ p {
   font-size: 25px;
   padding-top: 10px;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .skill-box {
   background: linear-gradient(
@@ -260,6 +283,10 @@ p {
   margin-top: 50px;
   position: relative;
 }
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
 .project-box {
   background: linear-gradient(rgba(215, 231, 65, 0.6), rgba(185, 44, 110, 0.6));
   border-radius: 10px;
@@ -297,61 +324,82 @@ p {
 }
 
 /******************************************About me************************************/
-.About{
+.container {
   display: flex;
-
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   width: 100%;
   flex-wrap: wrap;
-  padding-top: 10%;
+  padding-left: 20%;
 }
 .image {
   flex: 1;
   text-align: center;
-}
-.image img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 5s ease-in-out infinite;
+  position: absolute;
+  border: 2px solid aqua;
+  box-shadow: 0px 0px 50px 5px aqua;
+  margin-top: 15px;
+  transition: 1s;
+  z-index: 1;
 }
 .content {
   flex: 2;
-  padding: 20px;
   animation: slideIn 1.5s ease-in-out;
 }
-.h2 {
+.content .h2 {
   color: rgb(95, 209, 243);
   font-size: 50px;
-
-  margin: auto;
   z-index: 1;
 }
 .p {
   color: #ece7e7;
-  text-align: left;
-  position:relative;
-  padding-left: 50%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI";
   font-size: 20px;
   z-index: 1;
+  margin-top: 15px;
+  display: grid;
+  padding-left: 40%;
 }
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes slideIn {
-  from { transform: translateX(-50px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @media (max-width: 700px) {
-  .About{
-      flex-direction: column;
-      text-align: center;
+  .image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 2px aqua;
+    margin-left: 15%;
+    border-top: none;
+    z-index: 1;
+    border: 2px solid aqua;
+  }
+  .content .h2 {
+    padding-left: 10%;
+  }
+  .p {
+    margin-top: 60%;
   }
 }
 /**************************************Contact Page css******************************************/
@@ -396,8 +444,8 @@ textarea {
   border: 3px solid #07adad;
   border-radius: 10px;
   background-color: transparent;
- font-size: 25px;
- color: rgb(235, 225, 225);
+  font-size: 25px;
+  color: rgb(235, 225, 225);
 }
 .btn2 {
   width: 500px;
@@ -421,7 +469,7 @@ textarea {
 input {
   font-size: 20px;
 }
-@media(max-width:700px){
+@media (max-width: 700px) {
   .contact-container {
     background-size: cover;
   }
@@ -429,12 +477,12 @@ input {
     padding-left: 10px;
   }
   input,
-textarea{
-  margin:10px;
-  width: 100%;
-}
-.btn2 {
-  margin-left: 10px;
-  width: 100%;
-}
+  textarea {
+    margin: 10px;
+    width: 100%;
+  }
+  .btn2 {
+    margin-left: 10px;
+    width: 100%;
+  }
 }
