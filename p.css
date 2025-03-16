@@ -337,7 +337,8 @@ p {
 }
 .project-box img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
+  height: 200px;
 }
 .project-box h3 {
   margin: 10px 0;
