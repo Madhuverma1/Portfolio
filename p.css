@@ -314,6 +314,9 @@ p {
   padding: 20px;
   margin-top: 50px;
   position: relative;
+  cursor: pointer;
+  height: 50vh;
+  width: 100%;
 }
 .projects-container p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -347,13 +350,15 @@ p {
   color: #dad3d3;
 }
 .project-box a {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: inline-block;
-  margin-top: 10px;
+  margin-top:  80px;
   padding: 8px 15px;
-  background: blue;
+  background: rgb(11, 11, 194);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 @media (max-width: 700px) {
   #Projects {
@@ -378,7 +383,8 @@ p {
   flex-wrap: wrap;
   margin: auto;
   z-index: 1;
-  height: 400px;
+  height: 500px;
+  width: 100%;
 }
 .image {
   flex: 1;
@@ -444,8 +450,8 @@ p {
     margin-top: 30px;
   }
   #container {
-    margin-top: 100px;
-    height: 80vh;
+    margin-top: 350px;
+    height: 90vh;
     width: 100%;
   }
 }
