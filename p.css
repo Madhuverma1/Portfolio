@@ -144,15 +144,19 @@ nav ul li a {
   padding-top: 10%;
   font-size: 25px;
 }
-
+#hero h1{
+  color:#e2a420;
+  font-size: 35px;
+}
 #hero p {
   padding: 20px;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-top: 20px;
+  line-break: 20px;
 }
 #hero p span {
-  color: aqua;
+  color:#900C3F ;
   font-size: 20px;
   font-weight: 600;
 }
@@ -238,9 +242,14 @@ button .btn {
   padding: 30px;
   margin-top: 30px;
 }
+#S-B p{
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: chive;
+}
 h2 {
   text-align: center;
-  color: aqua;
+  color:#900C3F ;
   font-size: 50px;
   font-weight: 600;
   margin-top: 30px;
@@ -272,7 +281,7 @@ p {
   font-size: 35px;
   margin: 10px;
 }
-.skill-box p {
+#S-B .skill-box p {
   color: rgb(236, 233, 233);
   font-size: 15px;
   font-family: "Lucida Sans";
@@ -315,24 +324,30 @@ p {
   margin-top: 50px;
   position: relative;
   cursor: pointer;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
+}
+#Projects p{
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: chive;
 }
 .projects-container p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
+  font-size: 29px;
 }
 .project-box {
   background: linear-gradient(rgba(185, 44, 110, 0.6), rgba(85, 218, 223, 0.6));
   border-radius: 10px;
   padding: 15px;
   width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px  0 2px 5px rgba(86, 108, 206, 0.2);
   transition: 0.3s;
   z-index: -1;
+  height: 500px;
 }
 .project-box:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
   z-index: 1;
 }
 .project-box img {
@@ -347,14 +362,14 @@ p {
   font-weight: 600;
 }
 .project-box p {
-  font-size: 20px;
+  font-size: 15px;
   color: #dad3d3;
 }
 .project-box a {
   font-size: 15px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: inline-block;
-  margin-top:  80px;
+  margin-top: 100px;
   padding: 8px 15px;
   background: rgb(11, 11, 194);
   color: white;
@@ -379,12 +394,12 @@ p {
 /******************************************About me************************************/
 #container {
   display: flex;
-  padding: 20px;
+  padding-top: 50px;
   width: 100%;
   flex-wrap: wrap;
   margin: auto;
-  z-index: 1;
-  height: 500px;
+  z-index: -1;
+  height: 400px;
   width: 100%;
 }
 .image {
@@ -397,13 +412,14 @@ p {
   position: absolute;
   border: 2px solid aqua;
   box-shadow: 0px 0px 50px 5px aqua;
-  margin-top: 15px;
   transition: 1s;
   z-index: -1;
+  margin-left: 15rem;
 }
 .content {
   flex: 2;
   animation: slideIn 1.5s ease-in-out;
+  padding-top: 0px;
 }
 .content .h2 {
   color: rgb(95, 209, 243);
@@ -435,24 +451,24 @@ p {
     width: 150px;
     border-radius: 50%;
     box-shadow: 0px 0px 50px 2px aqua;
-    margin-left: 100px;
+    margin-left: 170px;
     border-top: none;
     z-index: -1;
     border: 2px solid aqua;
     margin-top: 30px;
   }
   .p {
-    margin-top: 50%;
+    padding-top: 15rem;
     z-index: -1;
     padding-left: 0%;
     text-align: justify;
   }
   .content .h2 {
-    margin-top: 30px;
+    padding-top: 100px;
   }
   #container {
-    margin-top: 350px;
-    height: 90vh;
+    padding-top: 60rem;
+    height: 100rem;
     width: 100%;
   }
 }
