@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madhu Verma</title>
-    <link rel="stylesheet" type="text/css" href="p.css" />
+    <link rel="stylesheet" type="text/css" href="style1.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -155,28 +155,38 @@
 
 <!----------------------------------contact Page------------------------------->
 <section id="Contact">
-    
-<div class="contact-container">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"placeholder="Enter Name">
-        <p class="error" id="nameError"></p>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/madhu1362004@gmail.com" method="POST" class="contactForm">
+            <!-- Hidden input to prevent spam -->
+            <input type="hidden" name="_captcha" value="false">
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"placeholder="Enter email">
-        <p class="error" id="emailError"></p>
+            <!-- Redirect after submission -->
+            <input type="hidden" name="_next" value="https://madhuvermaportfolio.netlify.app/">
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4"placeholder="Massage"></textarea>
-        <p class="error" id="messageError"></p>
-        <button type="submit" class="btn2"  >Send Message</button>
-    </form>
-</div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter Name" required="">
+            <p class="error" id="NameError"></p>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter Email" required="">
+            <p class="error" id="EmailError"></p>
+
+            <label for="massege">Massege:</label>
+            <textarea name="message" rows="5" placeholder="Enter Message" required=""></textarea>
+            <p class="error" id="messageError"></p>
+
+           
+            <button type="submit" class="btn2">Send Message</button>
+        </form>
+    </div>
+     
 </section>
-</body>
-</html>
+
     <!-----------------------Javascript------------------------>
-    <script src="js.js"></script>
+    <script src="main.js"></script>
+   
+  
+
 </body>
 </html>

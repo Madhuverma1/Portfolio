@@ -510,12 +510,12 @@ p {
   }
 }
 /**************************************Contact Page css******************************************/
-#Contact {
+#Contact{
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   padding: 50px 20px;
-  text-align: left;
+text-align: left;
 }
 .contact-container {
   width: 100%;
