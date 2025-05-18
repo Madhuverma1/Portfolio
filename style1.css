@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #070a0e;
+  background-color: #010211fd;
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
@@ -14,6 +14,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%),
     url("computer2.jpg") no-repeat;
   width: 100%;
+  height: 100vh;
   background-size: cover;
 }
 /*******************************Navigation Bar**************************************/
@@ -31,9 +32,16 @@ body {
   top: 0px;
 }
 .logo {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   text-shadow: 0px 0px 15px #d61c6a;
+  text-decoration: none;
+  color: white;
+}
+.logoM {
+  font-size: 40px;
+  color: aqua;
+  font-family: "Calibi";
 }
 .nav-links {
   list-style: none;
@@ -56,7 +64,6 @@ body {
   text-decoration: underline;
   text-shadow: 0px 0px 8px aqua;
 }
-
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -252,18 +259,21 @@ body {
 }
 
 /********************************Skills-boxes**********************************/
+#S-B{
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
 .Skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: justify;
-  gap: 20px;
-  padding: 40px 20px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
 }
 h2 {
   text-align: center;
   color: #900c3f;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   margin-top: 30px;
 }
@@ -275,43 +285,36 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .skill-box {
-  background: linear-gradient(
-    rgba(60, 60, 182, 0.9),
-    rgba(167, 62, 62, 0.9),
-    rgba(69, 189, 69, 0.9)
-  );
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 10px 0px 10px rgb(50, 108, 156, 0.1);
-  max-width: 300px;
+  background: #0f1934;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   text-align: center;
-  margin: auto;
-  height: 350px;
-  transition: transform 0.1s ease-in-out;
+  transition: 0.3s ease;
 }
 .skill-box h3 {
   margin-bottom: 10px;
   color: rgb(95, 209, 243);
-  font-size: 35px;
-  margin: 10px;
+  font-size: 30px;
 }
-#S-B .skill-box p {
-  color: rgb(236, 233, 233);
-  font-size: 17px;
-  font-family: "Lucida Sans";
+.skill-box img {
+  width: 40%;
+  margin-bottom: 15px;
 }
-.skill-box p span {
-  color: rgb(245, 4, 24);
+.skill-box ul {
+  flex: 2;
+  padding-left: 25px;
+  padding: 0;
+  margin: 0;
+ 
 }
-.skill-box .bx {
-  font-size: 50px;
-  border: 3px solid black;
-  color: red;
-  border-radius: 50%;
-  background-color: white;
-  height: 70px;
-  width: 70px;
-  padding-top: 7px;
+.skill-box ul li {
+  margin: 6px 0;
+  font-size: 20px;
+  list-style: none;
+}
+.skill-box:hover {
+  box-shadow: 0 2px 5px 5px rgb(12, 41, 75);
 }
 /********************************responsive Skills********************************/
 @media (max-width: 600px) {
@@ -510,12 +513,12 @@ p {
   }
 }
 /**************************************Contact Page css******************************************/
-#Contact{
+#Contact {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   padding: 50px 20px;
-text-align: left;
+  text-align: left;
 }
 .contact-container {
   width: 100%;
