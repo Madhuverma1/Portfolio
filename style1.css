@@ -5,9 +5,10 @@
 }
 body {
   background-color: #010211fd;
-  font-family: Arial, sans-serif;
+  font-family: poppins;
   color: white;
   text-align: center;
+  padding-top: 80px;
 }
 .head {
   font-family: Arial, sans-serif;
@@ -30,6 +31,7 @@ body {
   padding: 10px 20px;
   left: 0;
   top: 0px;
+  z-index: 999;
 }
 .logo {
   font-size: 25px;
@@ -259,9 +261,9 @@ body {
 }
 
 /********************************Skills-boxes**********************************/
-#S-B{
+#S-B {
   padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
 }
 .Skills {
@@ -288,7 +290,7 @@ p {
   background: #0f1934;
   padding: 25px;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
   transition: 0.3s ease;
 }
@@ -306,7 +308,6 @@ p {
   padding-left: 25px;
   padding: 0;
   margin: 0;
- 
 }
 .skill-box ul li {
   margin: 6px 0;
@@ -350,16 +351,11 @@ p {
   }
 }
 /********************************Projects css***************************************/
-
-#Project {
-  text-align: center;
-  padding: 40px 20px;
-}
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 50px;
 }
 #Projects p {
   font-size: 20px;
@@ -370,48 +366,58 @@ p {
   font-size: 25px;
 }
 .project-box {
-  background: linear-gradient(rgba(185, 44, 110, 0.6), rgba(85, 218, 223, 0.6));
+  position: relative;
   border-radius: 10px;
-  max-width: 300px;
-  box-shadow: 1px 0 2px 5px rgba(86, 108, 206, 0.2);
-  transition: transform 1s ease-in-out;
-  margin-top: 30px;
-}
-.project-box:hover {
-  box-shadow: 5px 5px 10px 5px rgb(106, 106, 112);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  background: #1e1e1e;
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  margin-left: 30px;
 }
 .project-box img {
-  width: 300px;
-  border-radius: 5px;
-  height: 200px;
-}
-.project-box h3 {
-  margin: 10px 0;
-  font-size: 30px;
-  color: rgb(77, 202, 233);
-  font-weight: 600;
-}
-.project-box p {
-  font-size: 10px;
-  color: #dad3d3;
-  text-align: justify;
-}
-.project-box a {
-  display: inline-block;
-  font-size: 15px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 3rem;
-  padding: 8px 15px;
-  font-size: 20px;
-  text-transform: uppercase;
-  background: rgb(114, 4, 72);
-  color: rgb(240, 225, 12);
-  text-decoration: none;
-  border-radius: 15px;
-  border: 2px solid rgb(240, 225, 12);
-  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+.project-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: last baseline;
+  justify-content: right;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-box:hover .project-overlay {
+  opacity: 1;
+}
+
+.arrow-icon {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.arrow-icon:hover {
+  background: #fff;
+  color: #000;
+}
 @media (max-width: 600px) {
   .projects-container {
     flex-direction: column;
